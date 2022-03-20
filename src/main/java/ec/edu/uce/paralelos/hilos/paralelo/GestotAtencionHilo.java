@@ -2,7 +2,6 @@ package ec.edu.uce.paralelos.hilos.paralelo;
 
 import java.util.concurrent.TimeUnit;
 
-import ec.edu.uce.paralelo.hilos.Cajero;
 
 public class GestotAtencionHilo extends Thread{
 	

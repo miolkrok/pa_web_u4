@@ -10,9 +10,10 @@ public class MainHilo {
 		
 		long tiempoInicial = System.currentTimeMillis();
 		
-		CajeroHilo cajero1 = new CajeroHilo(" Edison",Arrays.asList(2,2,3,4,5));
+		CajeroHilo cajero1 = new CajeroHilo(" Edison",Arrays.asList(2,2,3,2));
 		CajeroHilo cajero2 = new CajeroHilo(" Carlos",Arrays.asList(1,2,2,3));
-		CajeroHilo cajero3 = new CajeroHilo(" Luis",Arrays.asList(2,3,2,3,4));
+		CajeroHilo cajero3 = new CajeroHilo(" Luis",Arrays.asList(2,3,2,3));
+		System.out.println("Hilo Principal: " +Thread.currentThread().getName());
 		GestotAtencionHilo gestor1 = new GestotAtencionHilo(cajero1, tiempoInicial);
 		GestotAtencionHilo gestor2 = new GestotAtencionHilo(cajero2, tiempoInicial);
 		GestotAtencionHilo gestor3 = new GestotAtencionHilo(cajero3, tiempoInicial);
@@ -25,6 +26,7 @@ public class MainHilo {
 		
 		long tiempoTranscurrido = (tiempoFinal-tiempoInicial)/1000;
 		System.out.println(tiempoTranscurrido + " seg ");
+		System.out.println("Termino!");
 
 	}
 
