@@ -46,7 +46,7 @@ public class EstudianteController {
 		return "lista";
 	}
 	@GetMapping("/estudianteNuevo")
-	public String obtenerPaginaIngresoDatos() {
+	public String obtenerPaginaIngresoDatos(Estudiante estudiante) {
 		
 		return "estudianteNuevo";
 	}
