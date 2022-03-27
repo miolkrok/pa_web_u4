@@ -56,7 +56,7 @@ public class EstudianteController {
 	@PostMapping("insertar")
 	public String insertarEstudiante(Estudiante estudiante, BindingResult result, Model modelo, RedirectAttributes redirectAttrs) {
 		this.estuServ.insertar(estudiante);	
-		redirectAttrs.addFlashAttribute("mensaje", "estudiante guardado");
+		redirectAttrs.addFlashAttribute("mensaje", "Estudiante Guardado");
 		return "redirect:todos";
 		
 	}
@@ -69,13 +69,13 @@ public class EstudianteController {
 		return "estudianteActualiza";
 		
 	}
-	@PostMapping("actualizar/{idEstudiante}")
+	@PutMapping("actualizar/{idEstudiante}")
 	public String actualizarEstudiante(@PathVariable("idEstudiante")Integer idEstudiante,Estudiante estudiante) {
 		estudiante.setId(idEstudiante);
 		this.estuServ.actualizar(estudiante);
 		return "index";
 	}
-	@PostMapping("borrar/{idEstudiante}")
+	@DeleteMapping("borrar/{idEstudiante}")
 	public String eliminarEstudiante(@PathVariable("idEstudiante")Integer idEstudiante, Model modelo) {
 		this.estuServ.eliminar(idEstudiante);
 		List<Estudiante> listaEstudiantes = this.estuServ.buscarTodos();

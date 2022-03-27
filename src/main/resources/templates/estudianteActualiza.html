@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="x-ua-compatible" <link href="../css/misprimerosestilos.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="x-ua-compatible" >
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 		<style type= "text/css">
@@ -19,12 +19,12 @@
 		<h3>Actualizar Estudiante</h3>
 		<div class="card-body">
 			<form action="#" th:action="@{/estudiantes/actualizar/{idEstudiante}(idEstudiante=${estu.id})}"
-				th:object="${estu}" method="POST">
+				th:object="${estu}" th:method="put">
 
 				<table >
 					<tr>
 						<td>
-							<label class="col-form-label">Nombre:</labelc>
+							<label class="col-form-label">Nombre:</label>
 						</td>
 						<td>
 							<input class="form-control" type="text" id="nombre" th:field="*{nombre}">
@@ -32,7 +32,7 @@
 					</tr>
 					<tr>
 						<td>
-							<label class="col-form-label">Apellido:</labelclass="col-form-label">
+							<labe class="col-form-label">Apellido:</label>
 						</td>
 						<td>
 							<input class="form-control" type="text" id="apellido" th:field="*{apellido}">
